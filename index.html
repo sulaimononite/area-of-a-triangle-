@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaScriptTest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form id="triangleForm">
+        <input type="number" id="base" placeholder="Base">
+        <input type="number" id="height" placeholder="Height">
+        <button type="button" onclick="calculateArea()">Calculate</button>
+    </form>
+    <div id="result"></div>
+    <script>
+        function calculateArea() {
+            var base = parseFloat(document.getElementById('base').value);
+            var height = parseFloat(document.getElementById('height').value);
+            var area = 0.5 * base * height;
+            document.getElementById('result').innerHTML = "Area: " + area.toFixed(2);
+        }
+    </script>
+    
+</body>
+</html>
